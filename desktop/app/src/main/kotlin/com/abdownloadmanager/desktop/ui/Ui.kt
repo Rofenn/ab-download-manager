@@ -105,7 +105,7 @@ object Ui : KoinComponent {
                 val showHomeSlot =
                     appComponent.showHomeSlot.collectAsState().value
                 showHomeSlot.child?.instance?.let {
-                    HomeWindow(it, appComponent::closeHome)
+                    HomeWindow(it, appComponent::exitAppAsync)
                 }
                 val showSettingSlot =
                     appComponent.showSettingSlot.collectAsState().value
